@@ -1,0 +1,7 @@
+# Skills shown on the home page. Add, remove or rename groups freely.
+- group: Data
+  items: [Python, Pandas, "Matplotlib, Seaborn", Jupyter Notebooks, SQL / MySQL]
+- group: Automation & AI
+  items: [Data pipelines, LLM APIs (Claude), Web scraping]
+- group: Tools
+  items: [Git & GitHub, "VS Code, Cursor", SEO research]

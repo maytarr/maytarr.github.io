@@ -1,0 +1,57 @@
+# Site settings. After editing this file, commit and push; GitHub Pages rebuilds automatically.
+
+title: Mayeadeh Tarr
+tagline: Data analysis and automation. I turn messy data and manual workflows into clear insights and repeatable pipelines.
+description: Mayeadeh Tarr's portfolio of data analysis, automation and product projects.
+url: "https://maytarr.github.io"
+baseurl: ""
+lang: en
+avatar: https://avatars.githubusercontent.com/u/255826343?v=4
+
+author:
+  name: Mayeadeh Tarr
+
+# Contact details. Leave a value as "" to hide it on the site.
+location: ""          # e.g. "Cape Town, South Africa"
+email: ""             # e.g. "you@example.com"
+github: maytarr       # username only
+linkedin: ""          # username only, from linkedin.com/in/<username>
+cv: ""                # path to a PDF, e.g. "/assets/cv.pdf"
+
+# Write-ups live in _projects/. Each file becomes a page at /projects/<filename>/.
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+
+markdown: kramdown
+kramdown:
+  input: GFM
+highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# RSS feed of write-ups, served at /feed/projects.xml
+feed:
+  collections:
+    - projects
+
+# Used by jekyll-seo-tag to tell search engines who the site belongs to
+social:
+  name: Mayeadeh Tarr
+  links:
+    - https://github.com/maytarr
+
+exclude:
+  - README.md
+  - _templates/

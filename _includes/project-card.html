@@ -1,0 +1,12 @@
+{% assign p = include.project %}
+{% assign minutes = p.content | strip_html | number_of_words | divided_by: 200 | at_least: 1 %}
+<article class="card">
+  {% if p.image %}<img class="card-image" src="{{ p.image | relative_url }}" alt="" loading="lazy">{% endif %}
+  <h3><a class="card-link" href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
+  <div class="meta">
+    {% if p.status %}<span class="status">{{ p.status }}</span>{% endif %}
+    <span>{{ minutes }} min read</span>
+  </div>
+  {% if p.description %}<p>{{ p.description }}</p>{% endif %}
+  {% include tags.html tags=p.tags %}
+</article>

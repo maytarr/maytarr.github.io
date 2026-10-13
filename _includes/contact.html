@@ -1,0 +1,7 @@
+<ul class="contact">
+  {% if site.location and site.location != "" %}<li class="location">{{ site.location }}</li>{% endif %}
+  {% if site.email and site.email != "" %}<li><a class="btn" href="mailto:{{ site.email }}">Email</a></li>{% endif %}
+  {% if site.github and site.github != "" %}<li><a class="btn" href="https://github.com/{{ site.github }}">GitHub</a></li>{% endif %}
+  {% if site.linkedin and site.linkedin != "" %}<li><a class="btn" href="https://www.linkedin.com/in/{{ site.linkedin }}">LinkedIn</a></li>{% endif %}
+  {% if site.cv and site.cv != "" %}<li><a class="btn" href="{{ site.cv | relative_url }}">Download CV</a></li>{% endif %}
+</ul>

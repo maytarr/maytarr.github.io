@@ -1,0 +1,1 @@
+I work with Python and data to answer practical questions, from which skills the data job market actually pays for, to how a search and SEO research process can be automated end to end. I care about traceable results: every number should lead back to its source.

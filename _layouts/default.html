@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}: projects" href="{{ '/feed/projects.xml' | relative_url }}">
+  <link rel="icon" href="{{ site.avatar }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <nav>
+    <div class="wrap">
+      <a class="brand" href="{{ '/' | relative_url }}">{{ site.author.name }}</a>
+      <ul>
+        <li><a href="{{ '/#projects' | relative_url }}">Projects</a></li>
+        <li><a href="{{ '/tags/' | relative_url }}">Tags</a></li>
+        <li><a href="{{ '/#contact' | relative_url }}">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main" class="wrap">
+    {{ content }}
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© {{ 'now' | date: '%Y' }} {{ site.author.name }}</span>
+      <span class="footer-links">
+        {% if site.github and site.github != "" %}<a href="https://github.com/{{ site.github }}">GitHub</a>{% endif %}
+        <a href="{{ '/feed/projects.xml' | relative_url }}">RSS</a>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>

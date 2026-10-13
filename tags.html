@@ -1,0 +1,30 @@
+---
+layout: default
+title: Projects by tag
+permalink: /tags/
+---
+{% assign all_tags = "" | split: "" %}
+{% for project in site.projects %}
+  {% assign all_tags = all_tags | concat: project.tags %}
+{% endfor %}
+{% assign all_tags = all_tags | uniq | sort_natural %}
+{% assign projects = site.projects | sort: "date" | reverse %}
+
+<header class="page-header">
+  <h1>Projects by tag</h1>
+  {% include tags.html tags=all_tags %}
+</header>
+
+{% for tag in all_tags %}
+<section id="{{ tag | slugify }}" class="tag-group">
+  <h2>{{ tag }}</h2>
+  <ul class="tag-list">
+    {% for project in projects %}{% if project.tags contains tag %}
+    <li>
+      <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
+      <span class="muted">{{ project.date | date: "%b %Y" }}</span>
+    </li>
+    {% endif %}{% endfor %}
+  </ul>
+</section>
+{% endfor %}
