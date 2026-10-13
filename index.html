@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mayeadeh Tarr</title>
+  <meta name="description" content="Mayeadeh Tarr: data analysis, automation and product projects.">
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/255826343?v=4">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --surface: #ffffff;
+      --text: #1c1917;
+      --muted: #57534e;
+      --border: #e7e5e4;
+      --accent: #0f766e;
+      --accent-soft: #ccfbf1;
+      --maxw: 880px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0c0a09;
+        --surface: #1c1917;
+        --text: #f5f5f4;
+        --muted: #a8a29e;
+        --border: #292524;
+        --accent: #2dd4bf;
+        --accent-soft: #134e4a;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.65 "Inter", system-ui, sans-serif;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 16px; }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: color-mix(in srgb, var(--bg) 85%, transparent);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav .wrap { display: flex; justify-content: space-between; align-items: center; height: 56px; }
+    nav .brand { font-weight: 700; color: var(--text); }
+    nav ul { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; font-size: 14px; }
+    nav ul a { color: var(--muted); }
+
+    header { padding: 80px 0 56px; }
+    header .row { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; }
+    header img { width: 96px; height: 96px; border-radius: 50%; border: 1px solid var(--border); }
+    h1 { font-size: clamp(32px, 6vw, 48px); line-height: 1.1; margin: 0 0 8px; letter-spacing: -0.02em; }
+    .tagline { font-size: 18px; color: var(--muted); margin: 0; max-width: 560px; }
+    .buttons { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; padding: 10px 18px; border-radius: 8px; font-weight: 500; font-size: 15px;
+      border: 1px solid var(--border); color: var(--text); background: var(--surface);
+    }
+    .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+    .btn:hover { text-decoration: none; opacity: 0.9; }
+
+    section { padding: 48px 0; border-top: 1px solid var(--border); }
+    h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); margin: 0 0 24px; font-weight: 600; }
+
+    .projects { display: grid; gap: 20px; }
+    .card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px;
+    }
+    .card h3 { margin: 0 0 4px; font-size: 20px; }
+    .card .status { font-size: 13px; color: var(--muted); margin-bottom: 12px; }
+    .card p { margin: 0 0 16px; color: var(--muted); }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 4px; }
+    .tag {
+      font: 500 12px "JetBrains Mono", monospace; padding: 3px 10px; border-radius: 999px;
+      background: var(--accent-soft); color: var(--text);
+    }
+    .card .links { margin-top: 16px; font-size: 14px; font-weight: 500; }
+
+    .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+    .skills h3 { font-size: 15px; margin: 0 0 8px; }
+    .skills ul { margin: 0; padding-left: 18px; color: var(--muted); }
+
+    footer { padding: 32px 0 48px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; }
+
+    @media (max-width: 520px) {
+      nav ul { gap: 14px; }
+      header { padding: 48px 0 40px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap">
+      <a class="brand" href="#">MT</a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <header>
+      <div class="row">
+        <img src="https://avatars.githubusercontent.com/u/255826343?v=4" alt="Mayeadeh Tarr">
+        <div>
+          <h1>Mayeadeh Tarr</h1>
+          <p class="tagline">Data analysis and automation. I turn messy data and manual workflows into clear insights and repeatable pipelines.</p>
+        </div>
+      </div>
+      <div class="buttons">
+        <a class="btn primary" href="#projects">View projects</a>
+        <a class="btn" href="https://github.com/maytarr" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </header>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>I work with Python and data to answer practical questions, from which skills the data job market actually pays for, to how a search and SEO research process can be automated end to end. I care about traceable results: every number should lead back to its source.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+
+        <article class="card">
+          <h3>Data Job Market Analysis</h3>
+          <div class="status">Completed</div>
+          <p>An analysis of data analyst job postings: which skills are most in demand for the top data roles, how those skills trend over time, how they pay, and which ones are both high-demand and high-paying.</p>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span><span class="tag">Jupyter</span>
+          </div>
+          <div class="links"><a href="https://github.com/maytarr/Python_Data_Project" target="_blank" rel="noopener">View on GitHub →</a></div>
+        </article>
+
+        <article class="card">
+          <h3>Search Discovery Pipeline</h3>
+          <div class="status">Pilot</div>
+          <p>An automated SEO discovery pipeline for a fintech product. It cleans a keyword set, uses AI to cluster keywords within an existing taxonomy, classifies intent, scores compliance risk and strategic priority, and links every cluster to its SERP evidence. Product-specific settings live in one config file, so the same pipeline runs for other products.</p>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">Claude API</span><span class="tag">SEO</span><span class="tag">Clustering</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>MedAudit</h3>
+          <div class="status">In development</div>
+          <p>A privacy-first mobile app that helps South African taxpayers prepare supporting documents for SARS medical-expense audits. Receipts are captured and read on the device, reviewed by a person, and exported as an expense schedule plus one combined evidence PDF. No receipt data leaves the phone.</p>
+          <div class="tags">
+            <span class="tag">Mobile</span><span class="tag">On-device OCR</span><span class="tag">Local-first</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div>
+          <h3>Data</h3>
+          <ul><li>Python, Pandas</li><li>Matplotlib, Seaborn</li><li>Jupyter Notebooks</li><li>SQL / MySQL</li></ul>
+        </div>
+        <div>
+          <h3>Automation &amp; AI</h3>
+          <ul><li>Data pipelines</li><li>LLM APIs (Claude)</li><li>Web scraping</li></ul>
+        </div>
+        <div>
+          <h3>Tools</h3>
+          <ul><li>Git &amp; GitHub</li><li>VS Code, Cursor</li><li>SEO research</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>The best way to reach me is through <a href="https://github.com/maytarr" target="_blank" rel="noopener">GitHub</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© 2026 Mayeadeh Tarr</div>
+  </footer>
+</body>
+</html>
