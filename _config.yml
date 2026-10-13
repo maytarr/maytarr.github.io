@@ -55,3 +55,8 @@ social:
 exclude:
   - README.md
   - _templates/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .bundle/
+  - .jekyll-cache/

@@ -29,4 +29,14 @@ Set `published: false` in the front matter to keep a half-finished write-up off 
 | Colours and styling | `assets/css/style.css` |
 | Page structure | `_layouts/`, `_includes/`, `index.html` |
 
+## Preview locally before pushing
+
+Needs Ruby 3.3 (installed at `C:\Ruby33-x64`). First time only: `bundle install`. Then:
+
+```
+bundle exec jekyll serve --livereload
+```
+
+Open http://127.0.0.1:4000. The page reloads by itself whenever you save a file. Changes to `_config.yml` need a restart (Ctrl+C, then run the command again).
+
 If a push breaks the build, GitHub shows the error under the repo's **Actions** tab and the live site keeps the last working version.
