@@ -12,10 +12,10 @@ author:
   name: Mayeadeh Tarr
 
 # Contact details. Leave a value as "" to hide it on the site.
-location: ""          # e.g. "Cape Town, South Africa"
-email: ""             # e.g. "you@example.com"
+location: "Cape Town, South Africa"
+email: "tarrmaye@gmail.com"
 github: maytarr       # username only
-linkedin: ""          # username only, from linkedin.com/in/<username>
+linkedin: "mayeadeh-tarr"   # username only, from linkedin.com/in/<username>
 cv: ""                # path to a PDF, e.g. "/assets/cv.pdf"
 
 # Write-ups live in _projects/. Each file becomes a page at /projects/<filename>/.
@@ -51,6 +51,7 @@ social:
   name: Mayeadeh Tarr
   links:
     - https://github.com/maytarr
+    - https://www.linkedin.com/in/mayeadeh-tarr
 
 exclude:
   - README.md
