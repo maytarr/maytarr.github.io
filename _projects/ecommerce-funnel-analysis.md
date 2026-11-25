@@ -30,9 +30,9 @@ I used six events as the six steps of my funnel:
 | Entered payment details | `add_payment_info` |
 | Bought | `purchase` |
 
-A **visitor** here is one anonymous ID that GA4 gives each browser. For each step, I counted how many different visitors did it at least once in the three months.
+A **visitor** here is one anonymous ID that GA4 gives each browser. One visitor can make several visits over the three months, but I counted each visitor only once per step: for example, "Visited the shop" means the visitor started at least one visit, however many they made.
 
-I then worked out two kinds of rate: the share of visitors who moved on from one step to the next, and the share of all visitors who eventually bought. I compared these by device, by how visitors first arrived at the shop, and week by week.
+I then looked at how many visitors moved from one step to the next, and how many of all the original visitors eventually made a purchase. I also compared these patterns by device, by how visitors first arrived at the shop, and week by week.
 
 One simplification is worth knowing. I counted each step separately, so the funnel does not check that a visitor did the steps in order or in the same visit. That is fine for a first overview, and making it stricter is one of my next steps.
 
@@ -48,7 +48,7 @@ The data does not say why. Shipping costs or other unexpected charges often firs
 
 **There is no clear difference between mobile and desktop.** 1.71% of the 107 981 mobile visitors bought something, compared with 1.62% of the 157 079 desktop visitors.
 
-Small gaps like this can appear by chance, so I used a **two-proportion z-test**, a standard test for comparing two percentages. It gave a **p-value** of 0.056. In plain terms: if mobile and desktop visitors really bought at the same rate, a gap at least this large would still turn up by chance about 6% of the time. Analysts usually treat a difference as real only when that chance is below 5% (a p-value below 0.05). So the difference between mobile and desktop is not statistically significant.
+Small gaps like this can appear by chance, so I used a **two-proportion z-test**, a standard test for comparing two percentages. It gave a **p-value** of 0.056. In plain terms: if mobile and desktop visitors really bought at the same rate, a gap at least this large would still turn up by chance about 6% of the time. Analysts commonly use a threshold of 0.05 to decide whether a result is statistically significant. At 0.056, the difference between mobile and desktop is not statistically significant.
 
 ![Purchase rate by traffic source](/assets/images/ecommerce-funnel/02_purchase_rate_by_source.png)
 
@@ -82,7 +82,7 @@ Up to 25 January, only a small share of purchases (4% to 13% a day) had a value 
 | 28 January | 93% |
 | 31 January | 100% |
 
-The shop did not suddenly start giving its products away. People were still buying, but the tracking stopped recording how much they paid. So the purchase counts for those days are still reliable, but the revenue figures are not.
+This does not mean the shop had started giving its products away. Purchases were still being recorded at their usual rate, but the revenue values attached to them had become unreliable. The most likely explanation is a tracking problem, although the data alone cannot confirm the exact cause.
 
 I therefore kept the purchase counts and purchase rates for those days, but left their revenue out of my conclusions. The weekly chart shows that week's revenue in grey, and none of the findings above rely on it.
 
@@ -92,4 +92,4 @@ I therefore kept the purchase counts and purchase rates for those days, but left
 - **Assess whether the ads pay for themselves.** Combine advertising costs with sales data to calculate the cost per purchase and the return on ad spend for each traffic source.
 - **Test showing shipping costs earlier.** Run an A/B test to find out whether showing shipping costs on the cart page, rather than at payment, improves checkout completion without lowering the overall purchase rate.
 
-The SQL queries, results, charts and more detail on these next steps are in the [GitHub repository](https://github.com/maytarr/ecommerce-funnel-analysis).
+The full SQL analysis, supporting charts and additional project documentation are available in the [GitHub repository](https://github.com/maytarr/ecommerce-funnel-analysis).
