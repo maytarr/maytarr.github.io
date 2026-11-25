@@ -46,9 +46,11 @@ One simplification is worth knowing. I counted each step separately, so the funn
 
 The data does not say why. Shipping costs or other unexpected charges often first appear at this stage, so they could be part of the reason. That makes this step a good candidate for further investigation and an A/B test.
 
-**There is no clear difference between mobile and desktop.** 1.71% of the 107 981 mobile visitors bought something, compared with 1.62% of the 157 079 desktop visitors.
+**There is no clear difference between mobile and desktop.** 4 168 visitors used both a phone and a computer, so they would have been counted in both groups. To make a fair comparison, I set them aside and compared visitors who only ever used one device: 1.43% of the 104 030 mobile-only visitors bought something, compared with 1.42% of the 153 067 desktop-only visitors.
 
-Small gaps like this can appear by chance, so I used a **two-proportion z-test**, a standard test for comparing two percentages. It gave a **p-value** of 0.056. In plain terms: if mobile and desktop visitors really bought at the same rate, a gap at least this large would still turn up by chance about 6% of the time. Analysts commonly use a threshold of 0.05 to decide whether a result is statistically significant. At 0.056, the difference between mobile and desktop is not statistically significant.
+Small gaps like this can appear by chance, so I used a **two-proportion z-test**, a standard test for comparing two percentages. It gave a **p-value** of 0.82. In plain terms: if mobile and desktop visitors really bought at the same rate, a gap at least this large would turn up by chance about 82% of the time. Analysts commonly use a threshold of 0.05 to decide whether a result is statistically significant. At 0.82, the difference between mobile and desktop is not statistically significant.
+
+My first comparison, which counted everyone, made mobile look slightly ahead (1.71% against 1.62%, with a p-value of 0.056). That small gap came from the visitors who used both devices: 16% of them bought something, compared with about 1.4% of everyone else. This does not mean that using two devices makes people buy. A more likely explanation is that people who are seriously considering a purchase come back several times, on whichever device is at hand.
 
 ![Purchase rate by traffic source](/assets/images/ecommerce-funnel/02_purchase_rate_by_source.png)
 
@@ -67,7 +69,7 @@ Two cautions apply:
 
 After 21 December, sales fell sharply. Early January is the most puzzling period: in the week starting 4 January, the shop had about four in five as many visitors as in the peak week (24 493), but less than a quarter of the buyers (161).
 
-## A tracking error, not a sales drop
+## A revenue drop that was not what it seemed
 
 In the last week of January, the average amount spent per buyer fell to about US$18. In every earlier week, it was between about US$60 and US$105. Before reporting this as a finding, I checked the data day by day.
 
